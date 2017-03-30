@@ -92,14 +92,12 @@ public class ZDMCommonPagerView extends LinearLayout {
 
         return config.getTabs().get(position);
 
-    };
+    }
 
     public void setShowBitmap(Bitmap showBitmap){
         comm_iv_show.setImageBitmap(showBitmap);
 
     }
-
-
     /**
      *
      * @param l
@@ -250,95 +248,6 @@ public class ZDMCommonPagerView extends LinearLayout {
         this.positon = positon;
     }
 
-
-    @Deprecated
-    public class Builder {
-        private ListConfig config;
-        private ZDMSlidingTab vtab;
-        private ViewPager vpager;
-
-        private Spinner spinner;
-
-        private int positon = 0;
-
-        public TabItem getTabItem(int position) {
-
-            return config.getTabs().get(position);
-
-        }
-
-
-
-
-        public Builder(Context context) {
-            config = new ListConfig(context);
-            vtab = comm_vtab;
-            vpager = comm_vpager;
-            spinner = comm_spinner;
-        }
-
-        public Builder addTab(int vpagerId, List data, RecyclerView.Adapter recycleAdapter, String title, int swipRes, int revrRes, OnSwipRefreshListener onSwipRefreshListener) {
-            config.addTab(inflate(context, vpagerId, null), data, recycleAdapter, positon, title, swipRes, revrRes, onSwipRefreshListener);
-            ++positon;
-            return this;
-        }
-
-
-        public Builder setSpinner(SpinnerAdapter adapter, AdapterView.OnItemSelectedListener listener) {
-            spinner.setAdapter(adapter);
-            spinner.setOnItemSelectedListener(listener);
-            return this;
-        }
-
-
-        /**
-         * 设置setRecycleAdapter
-         *
-         * @param baseRecycleAdapter
-         * @return
-         */
-
-        public Builder setRecycleAdapter(RecyclerView.Adapter baseRecycleAdapter) {
-            config.addRecycleAdapter(baseRecycleAdapter);
-            return this;
-        }
-
-
-        /**
-         * 设置ZDMSlidingTab
-         *
-         * @param vtab
-         * @return
-         */
-        public Builder setVtab(ZDMSlidingTab vtab) {
-            this.vtab = vtab;
-            return this;
-        }
-
-        /**
-         * 设置 viewpager
-         *
-         * @param vpager
-         * @return
-         */
-        public Builder setVpager(ViewPager vpager) {
-            this.vpager = vpager;
-            return this;
-        }
-
-        /**
-         * 展示
-         *
-         * @return
-         */
-        public Builder show() {
-            vpager.setAdapter(config.createInPagerAdapter());
-            vtab.setViewPager(vpager);
-            return this;
-        }
-
-
-    }
 
 
 }

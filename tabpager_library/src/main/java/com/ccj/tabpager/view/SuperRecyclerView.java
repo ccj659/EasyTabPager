@@ -10,9 +10,6 @@ import com.ccj.tabpager.R;
 import com.ccj.tabpager.listener.OnAppBarSkipListener;
 import com.ccj.tabpager.listener.OnLoadNextListener;
 
-/**
- * @author Aidi on 15/4/2.
- */
 public class SuperRecyclerView extends RecyclerView {
 
     private OnLoadNextListener mLoadNextListener;

@@ -38,25 +38,42 @@ public class TestCommonPagerActivity extends AppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_common_pager);
 
+        /*****************初始化控件************/
         comm_test_view=(ZDMCommonPagerView)findViewById(R.id.comm_test_view);
+        /*****************初始化数据和adapter************/
 
         List<DemoModel> demoModels1 = loadData(getBaseContext());
         List<DemoModel> demoModels2 = loadData(getBaseContext());
         List<DemoModel> demoModels3= loadData(getBaseContext());
 
+
         BaseCommonRcvAdapter adapter1 = new BaseCommonRcvAdapter(demoModels1);
         BaseCommonRcvAdapter adapter2 = new BaseCommonRcvAdapter(demoModels2);
         BaseCommonRcvAdapter adapter3 = new BaseCommonRcvAdapter(demoModels3);
-
-
+        //spinner设置adapteer
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, obj);
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
+
+        /************设置监听*****************/
+
+
         comm_test_view.setOnClickListener(this);
         comm_test_view.setSpinner(adapter,this);
 
+        /************增加Tab Pager页面*****************/
+        /**
+         * vpagerId - 每一个pager的vpagerId
+         data - 每一个pager对应的data
+         recycleAdapter - 每一个pager对应的 adapter
+         title - pager的title
+         swipRes - swipLayout的Id
+         revrRes - recycleView的Id
+         onSwipRefreshListener - 刷新refresh和加载更多loadmore 回调借口
+         */
         comm_test_view.addTab(R.layout.vpager1, demoModels1, adapter1, "标-题1", R.id.sr_layout, R.id.list, this);
         comm_test_view.addTab(R.layout.vpager1, demoModels2, adapter2, "标-题2", R.id.sr_layout, R.id.list, this);
         comm_test_view.addTab(R.layout.vpager1, demoModels3, adapter3, "标-题3", R.id.sr_layout, R.id.list, this);
+        /************展示方法*****************/
         comm_test_view.show();
 
     }

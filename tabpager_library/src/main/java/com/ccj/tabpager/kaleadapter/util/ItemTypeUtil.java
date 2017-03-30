@@ -5,8 +5,6 @@ import android.support.annotation.VisibleForTesting;
 import java.util.HashMap;
 
 /**
- * @author ccj
- * @date 2017/3/22
  */
 @VisibleForTesting
 /*package*/ public class ItemTypeUtil {

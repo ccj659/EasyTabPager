@@ -1,16 +1,11 @@
 package com.ccj.tabpager.kaleadapter.util;
 
-import android.support.annotation.Keep;
-import android.support.annotation.NonNull;
-
 import com.ccj.tabpager.kaleadapter.item.AdapterItem;
 
 import java.util.List;
 
 
 /**
- * @author ccj
- * @date 2017/3/22
  * 通用的adapter必须实现的接口，作为方法名统一的一个规范
  */
 public interface IAdapter<T> {
@@ -18,7 +13,7 @@ public interface IAdapter<T> {
     /**
      * @param data 设置数据源
      */
-    void setData(@NonNull List<T> data);
+    void setData( List<T> data);
 
     List<T> getData();
 
@@ -34,8 +29,6 @@ public interface IAdapter<T> {
      * @param type 通过{@link #getItemType(Object)}得到的type
      * @return 任意类型的 AdapterItem
      */
-    @Keep
-    @NonNull
     AdapterItem createItem(Object type);
 
     /**
@@ -45,8 +38,6 @@ public interface IAdapter<T> {
      * @param type item的类型
      * @return 放入adapterItem的最终数据
      */
-    @Keep
-    @NonNull
     Object getConvertedData(T data, Object type);
 
     /**

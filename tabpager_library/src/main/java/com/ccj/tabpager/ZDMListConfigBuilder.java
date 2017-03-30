@@ -22,7 +22,7 @@ import com.ccj.tabpager.view.ZDMSlidingTab;
         .addTab((RecyclerView) inflater.inflate(R.layout.vpager, null),"标-题5")<br>
         .show();<br>
  *<br>
- *     </>
+ *     </code>
  * Created by ccj on 2017/3/21.
  */
 
@@ -36,24 +36,13 @@ public class ZDMListConfigBuilder {
 
         return config.getTabs().get(position);
 
-    };
+    }
 
 
     public ZDMListConfigBuilder(Context context) {
         config = new ListConfig(context);
     }
 
-    /**
-     * @param view 每一个pager的view
-     * @param data 每一个pager对应的data
-     * @param recycleAdapter 每一个pager对应的 adapter
-     * @param positon pager的位置
-     * @param title pager的title
-     * @param swipRes swipLayout的Id
-     * @param revrRes recycleView的Id
-     * @param onSwipRefreshListener 刷新回调借口<br>
-     * @return
-     */
 //    public ZDMListConfigBuilder addTab(View view,List data,RecyclerView.Adapter recycleAdapter, int positon, String title, int swipRes, int revrRes, OnSwipRefreshListener onSwipRefreshListener) {
 //        config.addTab(view,data,recycleAdapter, positon,title,swipRes,revrRes,onSwipRefreshListener);
 //        return this;
@@ -61,8 +50,6 @@ public class ZDMListConfigBuilder {
 
     /**
      * 设置setRecycleAdapter
-     * @param baseRecycleAdapter
-     * @return
      */
 
     public ZDMListConfigBuilder setRecycleAdapter(RecyclerView.Adapter baseRecycleAdapter) {
@@ -73,8 +60,6 @@ public class ZDMListConfigBuilder {
 
     /**
      * 设置ZDMSlidingTab
-     * @param vtab
-     * @return
      */
     public ZDMListConfigBuilder setVtab(ZDMSlidingTab vtab) {
         this.vtab = vtab;
@@ -83,8 +68,6 @@ public class ZDMListConfigBuilder {
 
     /**
      * 设置 viewpager
-     * @param vpager
-     * @return
      */
     public ZDMListConfigBuilder setVpager(ViewPager vpager) {
         this.vpager = vpager;
@@ -93,7 +76,6 @@ public class ZDMListConfigBuilder {
 
     /**
      * 展示
-     * @return
      */
     public ZDMListConfigBuilder show() {
         vpager.setAdapter(config.createInPagerAdapter());

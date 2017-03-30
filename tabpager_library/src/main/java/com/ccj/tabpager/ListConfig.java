@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  * Created by ccj on 2017/3/20.
- * 持有TabItem{@see TabItem} 的集合，并有添加等方法
+ * 持有TabItem  的集合，并有添加等方法
  */
 
 public class ListConfig {

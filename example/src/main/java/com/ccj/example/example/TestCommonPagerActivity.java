@@ -46,7 +46,6 @@ public class TestCommonPagerActivity extends AppCompatActivity implements View.O
         List<DemoModel> demoModels2 = loadData(getBaseContext());
         List<DemoModel> demoModels3= loadData(getBaseContext());
 
-
         BaseCommonRcvAdapter adapter1 = new BaseCommonRcvAdapter(demoModels1);
         BaseCommonRcvAdapter adapter2 = new BaseCommonRcvAdapter(demoModels2);
         BaseCommonRcvAdapter adapter3 = new BaseCommonRcvAdapter(demoModels3);

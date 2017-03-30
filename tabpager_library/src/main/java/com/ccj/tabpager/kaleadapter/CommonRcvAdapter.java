@@ -1,8 +1,6 @@
 package com.ccj.tabpager.kaleadapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,7 +17,6 @@ import java.util.List;
 
 /**
  * @author ccj
- * @date 2017/3/23
  */
 public abstract class CommonRcvAdapter<T> extends RecyclerView.Adapter<CommonRcvAdapter.RcvAdapterItem> implements IAdapter<T> {
 
@@ -36,7 +33,7 @@ public abstract class CommonRcvAdapter<T> extends RecyclerView.Adapter<CommonRcv
     public int itemClickCount;
 
 
-    public CommonRcvAdapter(@Nullable List<T> data) {
+    public CommonRcvAdapter( List<T> data) {
         if (data == null) {
             data = new ArrayList<>();
         }
@@ -97,7 +94,6 @@ public abstract class CommonRcvAdapter<T> extends RecyclerView.Adapter<CommonRcv
 
     /**
      * 配合RecyclerView的pool来设置TypePool
-     * @param typePool
      */
     public void setTypePool(HashMap<Object, Integer> typePool) {
         mUtil.setTypePool(typePool);
@@ -109,7 +105,7 @@ public abstract class CommonRcvAdapter<T> extends RecyclerView.Adapter<CommonRcv
     }
 
     @Override
-    public void setData(@NonNull List<T> data) {
+    public void setData( List<T> data) {
         mDataList = data;
     }
 
@@ -153,7 +149,6 @@ public abstract class CommonRcvAdapter<T> extends RecyclerView.Adapter<CommonRcv
         holder.item.handleData(getConvertedData(mDataList.get(position), mType), position);
     }
 
-    @NonNull
     @Override
     public Object getConvertedData(T data, Object type) {
         return data;

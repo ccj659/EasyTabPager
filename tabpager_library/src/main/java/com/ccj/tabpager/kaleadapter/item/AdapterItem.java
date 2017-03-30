@@ -1,18 +1,15 @@
 package com.ccj.tabpager.kaleadapter.item;
 
-import android.support.annotation.LayoutRes;
 import android.view.View;
 
 /**
  * @author ccj
- * @date 2017/3/21
  */
 public interface AdapterItem<T> {
 
     /**
      * @return item布局文件的layoutId
      */
-    @LayoutRes
     int getLayoutResId();
 
     /**
@@ -34,4 +31,4 @@ public interface AdapterItem<T> {
      */
     void handleData(T t, int position);
 
-}  
+}

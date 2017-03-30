@@ -124,7 +124,6 @@ public class ZDMCommonPagerView extends LinearLayout {
      * @param swipRes swipLayout的Id
      * @param revrRes recycleView的Id
      * @param onSwipRefreshListener 刷新refresh和加载更多loadmore 回调借口<br>
-     * @return
      */
     public void addTab(int vpagerId, List data, RecyclerView.Adapter recycleAdapter, String title, int swipRes, int revrRes, OnSwipRefreshListener onSwipRefreshListener) {
         config.addTab(inflate(context, vpagerId, null), data, recycleAdapter, positon, title, swipRes, revrRes, onSwipRefreshListener);
@@ -134,7 +133,7 @@ public class ZDMCommonPagerView extends LinearLayout {
     /**
      * 设置 筛选条件 spinner 以及监听
      * @param adapter spinner的adapter
-     * @param listener
+     * @param listener ss
      */
     public void setSpinner(SpinnerAdapter adapter, AdapterView.OnItemSelectedListener listener) {
         comm_spinner.setAdapter(adapter);
@@ -144,7 +143,6 @@ public class ZDMCommonPagerView extends LinearLayout {
     /**
      * 展示
      *
-     * @return
      */
     public void show() {
         comm_vpager.setAdapter(config.createInPagerAdapter());

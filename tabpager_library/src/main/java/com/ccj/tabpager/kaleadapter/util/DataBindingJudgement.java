@@ -1,8 +1,6 @@
 package com.ccj.tabpager.kaleadapter.util;
 
 /**
- * @author Kale
- * @date 2016/4/16
  */
 public class DataBindingJudgement {
 

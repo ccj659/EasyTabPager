@@ -1,16 +1,30 @@
 
 #EasyTabPager 
+---
 
 一个通用中间组件，简单通用的适配ViewPager,以及pager中的RecycleView
 简化复杂的操作，简单直接。
 
 
 ##To Use
+---
 ###In Gradle
+```java
+compile 'me.ccj.EasyTabPager:tabpager_library:1.0.1'
+
+```
 
 
 ###In Maven
+```java
+<dependency>
+  <groupId>me.ccj.EasyTabPager</groupId>
+  <artifactId>tabpager_library</artifactId>
+  <version>1.0.1</version>
+  <type>pom</type>
+</dependency>
 
+```
 
 ###In Your Application
 
@@ -60,13 +74,12 @@
 ```
 
 
-
 ##Example
-
+---
 ![](https://github.com/ccj659/EasyTabPager/blob/master/easyTabPager2.gif)
 
-
 ##思路和类结构
+---
 本通用中间组件，思想在于，用一个组件，简单通用的适配ViewPager,以及pager中的RecycleView，并且将其中的监听事件，抽离暴露出来方便调用。方便独立调用，以及扩展。
 
 
@@ -133,5 +146,8 @@ public class TabItem {
 该View作为通用控件。。。。 就这样吧。。。 
 
 详情参看代码。
+
+ 
+
 
  

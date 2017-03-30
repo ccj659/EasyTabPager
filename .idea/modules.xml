@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EasyTabPager.iml" filepath="$PROJECT_DIR$/EasyTabPager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabpager_library/tabpager_library.iml" filepath="$PROJECT_DIR$/tabpager_library/tabpager_library.iml" />
+    </modules>
+  </component>
+</project>

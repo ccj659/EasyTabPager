@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!-- ************************通过include layout 可以调用**************************** -->
+
+    <com.smzdm.client.base.weidget.zdmlistview.ZDMCommonPagerView
+        android:id="@+id/comm_test_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </com.smzdm.client.base.weidget.zdmlistview.ZDMCommonPagerView>
+
+ <!--   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/comm_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="关注" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/cmbkb_shift_dark_normal"
+            android:layout_above="@+id/button3"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/iv_transport" />
+
+        <ImageView
+            android:id="@+id/comm_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_imageview_width"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <com.smzdm.client.base.weidget.zdmslindingtab.ZDMSlidingTab
+        android:id="@+id/vtab"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+    </com.smzdm.client.base.weidget.zdmslindingtab.ZDMSlidingTab>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+
+</LinearLayout>
+
+

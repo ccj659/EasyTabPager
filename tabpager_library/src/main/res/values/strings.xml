@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">base</string>
+
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+
+
+    <string name="no_more">没有了哦！</string>
+
+</resources>
